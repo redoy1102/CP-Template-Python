@@ -18,7 +18,7 @@ def solve():
     # print(a)
 
     res = 0
-    for i in range(len(a) // 2):
+    for i in range(len(a) // 2):    # implementing 2 pointer
         res += (a[i] - a[(len(a) - 1) - i])
     print(res)
 
