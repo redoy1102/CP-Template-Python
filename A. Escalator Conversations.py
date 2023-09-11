@@ -5,21 +5,20 @@ import math as ma
 import collections
 
 
-# .......................................
+# ------------------------------------------
+# Driver Code
+# ------------------------------------------
 
 
 def solve():
     # n = int(input())
-    # nums = [int(i) for i in input().split()][:n]
-    a, b, c = map(int, input().split())
-    if (c % 2 == 0) and (a == b):
-        print("Second")
-    elif (c % 2 != 0) and (a == b):
-        print("First")
-    elif a > b:
-        print("First")
-    elif b > a:
-        print("Second")
+    n, m, k, H = map(int, input().split())
+    h = [int(i) for i in input().split()][:n]
+    
+    res = 0
+    for i in h:
+        res += H != i and abs(H-i) %k == 0 and abs(H-i) <= (m-1)*k
+    print(res)
 
 
 def main():
@@ -30,8 +29,14 @@ def main():
         solve()
 
 
+# ------------------------------------------
+# Driver Code
+# ------------------------------------------
+
 def check():
-    num = 34.0
+    res = 0
+    res += (10 != 5) and 2 != 4
+    print(res)
 
 
 def euclidean_algo(a, b):
