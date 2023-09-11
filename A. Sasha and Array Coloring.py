@@ -11,14 +11,17 @@ import collections
 
 
 def solve():
-    # n = int(input())
-    n, m, k, H = map(int, input().split())
-    h = [int(i) for i in input().split()][:n]
-    
+    n = int(input())
+    # n, m, k, H = map(int, input().split())
+    a = [int(i) for i in input().split()][:n]
+    a.sort(reverse=True)
+    # print(a)
+
     res = 0
-    for i in h:
-        res += H != i and abs(H-i) %k == 0 and abs(H-i) <= (m-1)*k
+    for i in range(len(a) // 2):
+        res += (a[i] - a[(len(a) - 1) - i])
     print(res)
+
 
 
 def main():
