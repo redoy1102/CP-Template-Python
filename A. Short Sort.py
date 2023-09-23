@@ -11,16 +11,21 @@ import collections
 
 
 def solve():
-    n = int(input())
-    # n, m, k, H = map(int, input().split())
-    a = [int(i) for i in input().split()][:n]
-    a.sort(reverse=True)
-    # print(a)
+    # n = int(input())
+    # n, k, x = map(int, input().split())
+    # a = [int(i) for i in input().split()][:n]
+    s = input()
+    
+    if s == "abc":
+        print("YES")
+    elif s[0] == "a" or s[2] == "c":
+        print("YES")
+    elif s == "cba":
+        print("YES")
+    else:
+        print("NO")
 
-    res = 0
-    for i in range(len(a) // 2):    # implementing 2 pointer
-        res += (a[i] - a[(len(a) - 1) - i])
-    print(res)
+
 
 
 
@@ -37,9 +42,10 @@ def main():
 # ------------------------------------------
 
 def check():
-    res = 0
-    res += (10 != 5) and 2 != 4
-    print(res)
+    s = "abc"
+    r = s[0]
+    r += "d"
+    print(r)
 
 
 def euclidean_algo(a, b):
