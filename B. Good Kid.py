@@ -11,22 +11,19 @@ import collections
 
 
 def solve():
-    # n = int(input())
+    n = int(input())
     # n, k, x = map(int, input().split())
-    # a = [int(i) for i in input().split()][:n]
-    s = input()
-    
-    if s == "abc":
-        print("YES")
-    elif s[0] == "a" or s[2] == "c":
-        print("YES")
-    elif s == "cba":
-        print("YES")
-    else:
-        print("NO")
+    a = [int(i) for i in input().split()][:n]
+    # s = input()
 
+    low = min(a)
+    indexLow = a.index(low)
+    a[indexLow] += 1
 
-
+    mul = 1
+    for i in a:
+        mul *= i
+    print(mul)
 
 
 def main():
