@@ -11,19 +11,15 @@ import collections
 
 
 def solve():
-    n = int(input())
-    # n, k, x = map(int, input().split())
+    # n = int(input())
+    n, k= map(int, input().split())
     a = [int(i) for i in input().split()][:n]
     # s = input()
 
-    low = min(a)
-    indexLow = a.index(low)
-    a[indexLow] += 1
-
-    mul = 1
-    for i in a:
-        mul *= i
-    print(mul)
+    if k in a:
+        print("YES")
+    else:
+        print("NO")
 
 
 def main():
