@@ -11,20 +11,17 @@ import collections
 
 
 def solve():
-    # n = int(input())
-    n, k= map(int, input().split())
-    a = [int(i) for i in input().split()][:n]
+    n = int(input())
+    # n, k= map(int, input().split())
+    # a = [int(i) for i in input().split()][:n]
     # s = input()
-
-    if k in a:
-        print("YES")
-    else:
-        print("NO")
+    print(prime_factors(n))
+    
 
 
 def main():
-    t = int(input())
-    # t = 1
+    # t = int(input())
+    t = 1
     for _ in range(t):
         # check()
         solve()
@@ -46,6 +43,17 @@ def euclidean_algo(a, b):
         return a
     else:
         return euclidean_algo(b, a % b)
+
+def prime_factors(n):
+    factors = []
+    index = 2
+    while n > 1:
+        if n % index == 0:      # if index is the factor of n
+            n = n // index
+            factors.append(index)   # storing the factors
+        else:
+            index += 1
+    return factors
 
 
 def prime_number(n):
