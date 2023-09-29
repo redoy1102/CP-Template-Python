@@ -45,6 +45,7 @@ def euclidean_algo(a, b):
     else:
         return euclidean_algo(b, a % b)
 
+
 def prime_factors(n):
     factors = []
     index = 2
@@ -76,6 +77,18 @@ def binary_representation(n):
         n = n // 2
     b.reverse()
     return b
+
+
+def ternary_to_decimal(num):
+    total = 0
+    i = 0
+    while num != 0:
+        lastDigit = num % 10
+        total = total + (lastDigit * pow(3, i))
+        num = num // 10
+        i += 1
+    return total
+
 
 def quick_sort(nums):
     nums = list(nums)
