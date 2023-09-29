@@ -69,6 +69,14 @@ def prime_number(n):
     return True
 
 
+def binary_representation(n):
+    b = []
+    while n != 0:
+        b.append(n % 2)
+        n = n // 2
+    b.reverse()
+    return b
+
 def quick_sort(nums):
     nums = list(nums)
 
