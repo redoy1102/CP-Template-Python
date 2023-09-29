@@ -11,11 +11,12 @@ import collections
 
 
 def solve():
-    n = int(input())
+    # n = int(input())
     # n, k= map(int, input().split())
     # a = [int(i) for i in input().split()][:n]
     # s = input()
-    print(prime_factors(n))
+    print(pow(10, 0))
+    
     
 
 
@@ -187,7 +188,7 @@ def checkForSubsequence(STR, target):
 3. Summation of all the even numbers between a to b (inclusive):
 ((n * (n + 1)) // 2) - ((((b + 1) // 2) * ((b + 1) // 2)) - ((((a-1)+1) // 2) * (((a-1)+1) // 2)))
 
-4. 
+4. Extract ith digit from a number: math.floor(n / pow(10, i)) % 10
 """
 
 if __name__ == "__main__":
