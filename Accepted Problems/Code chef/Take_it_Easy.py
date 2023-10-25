@@ -8,20 +8,42 @@ import collections
 # ------------------------------------------
 # Driver Code
 # ------------------------------------------
+def s(n, a):
+    tc = sum(a)
+    
+    
+    if tc % n != 0:
+        return "No"
+    
+    tarC = tc // n
+    
+    for i in a:
+        if abs(tarC - i) % 2 != 0:
+            return "No"
+        
+        
+    return "Yes"
+        
 
 
 def solve():
-    # n = int(input())
+    n = int(input())
     # n, k= map(int, input().split())
-    # a = [int(i) for i in input().split()][:n]
+    a = [int(i) for i in input().split()][:n]
     # s = input()
+    print(s(n, a))
+    
+    
+    
+        
+    
     
     
 
 
 def main():
-    # t = int(input())
-    t = 1
+    t = int(input())
+    # t = 1
     for _ in range(t):
         # check()
         solve()
